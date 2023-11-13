@@ -1,2 +1,2 @@
 # Legendary
-Legendary zkSync mem token contract
+Legendary zkSync meme token contract
