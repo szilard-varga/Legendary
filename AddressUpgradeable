@@ -2,10 +2,6 @@ pragma solidity ^0.8.1;
 
 library AddressUpgradeable {
     /**
-     * @dev Returns true if `account` is a contract.
-     *
-     * [IMPORTANT]
-     * ====
      * It is unsafe to assume that an address for which this function returns
      * false is an externally-owned account (EOA) and not a contract.
      *
