@@ -13,24 +13,6 @@ import "../proxy/utils/Initializable.sol";
  * applications may benefit from on-chain enumerability, for those cases see
  * {AccessControlEnumerable}.
  *
- * Roles are referred to by their `bytes32` identifier. These should be exposed
- * in the external API and be unique. The best way to achieve this is by
- * using `public constant` hash digests:
- *
- * ```
- * bytes32 public constant MY_ROLE = keccak256("MY_ROLE");
- * ```
- *
- * Roles can be used to represent a set of permissions. To restrict access to a
- * function call, use {hasRole}:
- *
- * ```
- * function foo() public {
- *     require(hasRole(MY_ROLE, msg.sender));
- *     ...
- * }
- * ```
- *
  * Roles can be granted and revoked dynamically via the {grantRole} and
  * {revokeRole} functions. Each role has an associated admin role, and only
  * accounts that have a role's admin role can call {grantRole} and {revokeRole}.
@@ -40,9 +22,6 @@ import "../proxy/utils/Initializable.sol";
  * roles. More complex role relationships can be created by using
  * {_setRoleAdmin}.
  *
- * WARNING: The `DEFAULT_ADMIN_ROLE` is also its own admin: it has permission to
- * grant and revoke this role. Extra precautions should be taken to secure
- * accounts that have been granted it.
  */
 abstract contract AccessControlUpgradeable is Initializable, ContextUpgradeable, IAccessControlUpgradeable, ERC165Upgradeable {
     function __AccessControl_init() internal onlyInitializing {
