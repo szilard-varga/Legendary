@@ -15,32 +15,6 @@ import "../../utils/AddressUpgradeable.sol";
  * reused. This mechanism prevents re-execution of each "step" but allows the creation of new initialization steps in
  * case an upgrade adds a module that needs to be initialized.
  *
- * For example:
- *
- * [.hljs-theme-light.nopadding]
- * ```
- * contract MyToken is ERC20Upgradeable {
- *     function initialize() initializer public {
- *         __ERC20_init("MyToken", "MTK");
- *     }
- * }
- * contract MyTokenV2 is MyToken, ERC20PermitUpgradeable {
- *     function initializeV2() reinitializer(2) public {
- *         __ERC20Permit_init("MyToken");
- *     }
- * }
- * ```
- *
- * TIP: To avoid leaving the proxy in an uninitialized state, the initializer function should be called as early as
- * possible by providing the encoded function call as the `_data` argument to {ERC1967Proxy-constructor}.
- *
- * CAUTION: When used with inheritance, manual care must be taken to not invoke a parent initializer twice, or to ensure
- * that all initializers are idempotent. This is not verified automatically as constructors are by Solidity.
- *
- * [CAUTION]
- * ====
- * Avoid leaving a contract uninitialized.
- *
  * An uninitialized contract can be taken over by an attacker. This applies to both a proxy and its implementation
  * contract, which may impact the proxy. To prevent the implementation contract from being used, you should invoke
  * the {_disableInitializers} function in the constructor to automatically lock it when it is deployed:
