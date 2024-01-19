@@ -95,10 +95,6 @@ library ECDSAUpgradeable {
 
     /**
      * @dev Overload of {ECDSA-tryRecover} that receives the `r` and `vs` short-signature fields separately.
-     *
-     * See https://eips.ethereum.org/EIPS/eip-2098[EIP-2098 short signatures]
-     *
-     * _Available since v4.3._
      */
     function tryRecover(
         bytes32 hash,
