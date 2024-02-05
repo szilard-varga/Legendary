@@ -8,19 +8,9 @@ pragma solidity ^0.8.0;
  * _Available since v4.5._
  */
 interface IVotesUpgradeable {
-    /**
-     * @dev Emitted when an account changes their delegate.
-     */
     event DelegateChanged(address indexed delegator, address indexed fromDelegate, address indexed toDelegate);
-
-    /**
-     * @dev Emitted when a token transfer or delegate change results in changes to a delegate's number of votes.
-     */
     event DelegateVotesChanged(address indexed delegate, uint256 previousBalance, uint256 newBalance);
 
-    /**
-     * @dev Returns the current amount of votes that `account` has.
-     */
     function getVotes(address account) external view returns (uint256);
 
     /**
