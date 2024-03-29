@@ -1,11 +1,7 @@
 // SPDX-License-Identifier: Apache 2.0
 pragma solidity ^0.8.0;
 
-/**
- * main class
-*
-*
- */
+// check if it is a contract
 library TWAddress {
     /**
      * @dev Returns true if `account` is a contract.
